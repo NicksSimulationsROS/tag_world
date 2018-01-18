@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>tag_world</name>
+  <version>0.3.0</version>
+  <description>Creates visual markers in Gazebo </description>
+  <maintainer email="nicholas.sullivan@adelaide.edu.au">Nick Sullivan</maintainer>
+  <author email="nicholas.sullivan@adelaide.edu.au">Nick Sullivan</author>
+  <license>CC BY 3.0</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <build_depend>xacro</build_depend>
+  <run_depend>ar_track_alvar</run_depend>
+  
+
+  <export>
+  </export>
+</package>

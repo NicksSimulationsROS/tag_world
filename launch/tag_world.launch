@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!-- To make more tags, 'rosrun ar_track_alvar createMarker #' -->
+     
+<launch>
+  <arg name="gui" default="false"/>
+  <arg name="tag_num" default="0"/>
+  <arg name="ns" default="tag_world"/>
+  <arg name="sdf" default="false"/>
+  
+  <!-- Start Gazebo. -->
+  <param name="/use_sim_time" value="true"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <!-- Spawn using an SDF model. This way is much nicer, but doesn't work with
+       the URDF's used by robot models. -->
+  <group if="$(arg sdf)">
+    <param name="$(arg ns)/tag$(arg tag_num)"
+	    command="$(find xacro)/xacro.py '$(find tag_world)/models/tag_box.sdf.xacro' 
+	    'tag_world:=$(find tag_world)' 'tag_num:=$(arg tag_num)' " />
+    <node name="spawn_tag$(arg tag_num)" pkg="gazebo_ros" type="spawn_model" ns="$(arg ns)"
+	    args="-sdf -param /$(arg ns)/tag$(arg tag_num) -model textured_tag$(arg tag_num)"/>
+	</group>
+	
+	<!-- Spawn using an URDF model. This way is painful, but works with URDF's 
+	     used by robot models. See 'my_kobuki_description' URDF's for an example. -->
+	<group unless="$(arg sdf)">
+	  <param name="$(arg ns)/tag$(arg tag_num)"
+	    command="$(find xacro)/xacro.py '$(find tag_world)/models/tag_box.urdf.xacro' 
+	    'tag_world:=$(find tag_world)' 'tag_num:=$(arg tag_num)' " />
+    <node name="spawn_tag_model" pkg="gazebo_ros" type="spawn_model" ns="$(arg ns)"
+		args="-urdf -param /$(arg ns)/tag$(arg tag_num) -model tag$(arg tag_num)"/>
+	</group>
+</launch>
