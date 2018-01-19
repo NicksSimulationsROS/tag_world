@@ -1,26 +1,24 @@
 <?xml version="1.0"?>
-<!-- This is for loading a single tag as a flat box. -->
-<robot name="tag_box">
+<robot name="tag_box" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
   <link name="tag_link">
     <inertial>
-      <origin xyz="0 0 0" />
-      <mass value="0.001" />
+      <origin xyz="0 0 0.15" />
+      <mass value="0.3" />
       <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"/>
+      <origin xyz="0 0 0.15"/>
       <geometry>
-        <mesh filename="package://tag_world/meshes/tag$(arg tag_num).dae" />
+        <mesh filename="package://tag_world/meshes/tags$(arg tag_num).dae" />
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0"/>
+      <origin xyz="0 0 0.15"/>
       <geometry>
-        <box size="0.1 0.1 0.001" />
+        <box size="0.3 0.3 0.3" />
       </geometry>
     </collision>
   </link>
-  <!--<gazebo reference="base_link">
-    <material>Gazebo/Blue</material>
-  </gazebo>-->
+  
 </robot>

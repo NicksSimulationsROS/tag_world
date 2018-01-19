@@ -88,45 +88,7 @@
     <child link="ar_marker_${num*6+5}" />
     <origin xyz="0 0 0" rpy="3.1416 0 1.571"/>
   </joint>
-  
-  <!--    
-  <link name="ar_marker_${$(arg tag_num)*6}"></link>
-  <joint name="ar_marker_${$(arg tag_num)*6}_joint" type="fixed">
-    <parent link="tag_link" />
-    <child link="ar_marker_${$(arg tag_num)*6}" />
-    <origin xyz="0.15 0 0.15" rpy="1.571 0 1.571"/>
-  </joint>
-  <link name="ar_marker_${$(arg tag_num)*6+1}"></link>
-  <joint name="ar_marker_${$(arg tag_num)*6+1}_joint" type="fixed">
-    <parent link="tag_link" />
-    <child link="ar_marker_${$(arg tag_num)*6+1}" />
-    <origin xyz="0 -0.15 0.15" rpy="1.571 0 0"/>
-  </joint>
-  <link name="ar_marker_${$(arg tag_num)*6+2}"></link>
-  <joint name="ar_marker_${$(arg tag_num)*6+2}_joint" type="fixed">
-    <parent link="tag_link" />
-    <child link="ar_marker_${$(arg tag_num)*6+2}" />
-    <origin xyz="-0.15 0 0.15" rpy="-1.571 0 1.571"/>
-  </joint>
-  <link name="ar_marker_${$(arg tag_num)*6+3}"></link>
-  <joint name="ar_marker_${$(arg tag_num)*6+3}_joint" type="fixed">
-    <parent link="tag_link" />
-    <child link="ar_marker_${$(arg tag_num)*6+3}" />
-    <origin xyz="0 0.15 0.15" rpy="-1.571 0 0"/>
-  </joint>
-  <link name="ar_marker_${$(arg tag_num)*6+4}"></link>
-  <joint name="ar_marker_${$(arg tag_num)*6+4}_joint" type="fixed">
-    <parent link="tag_link" />
-    <child link="ar_marker_${$(arg tag_num)*6+4}" />
-    <origin xyz="0 0 0.3" rpy="0 0 0"/>
-  </joint>
-  <link name="ar_marker_${$(arg tag_num)*6+5}"></link>
-  <joint name="ar_marker_${$(arg tag_num)*6+5}_joint" type="fixed">
-    <parent link="tag_link" />
-    <child link="ar_marker_${$(arg tag_num)*6+5}" />
-    <origin xyz="0 0 0" rpy="3.1416 0 1.571"/>
-  </joint>-->
-  
+
   <gazebo reference="base_link">
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
