@@ -11,9 +11,9 @@
       <origin xyz="0 0 0.15"/>
       <geometry>
         <!--AR Track Alvar. -->
-        <mesh filename="package://tag_world/meshes/tags$(arg tag_num).dae" />
+        <!--<mesh filename="package://tag_world/meshes/tags$(arg tag_num).dae" />-->
         <!-- April Tags. -->
-        <!-- <mesh filename="package://tag_world/meshes/apriltags$(arg tag_num).dae" /> -->
+        <mesh filename="package://tag_world/meshes/apriltags$(arg tag_num).dae" />
       </geometry>
     </visual>
     <collision>

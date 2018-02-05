@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 
-<!-- Launches a box with tags on each side. -->
+<!-- Launches a box with tags on each side. 
+       roslaunch tag_world tag_world.launch
+       -->
 
 <launch>
   <arg name="gui"     default="true"/>
