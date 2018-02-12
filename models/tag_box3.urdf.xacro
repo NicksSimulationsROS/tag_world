@@ -1,6 +1,48 @@
 <?xml version="1.0"?>
-<!-- This is for loading a box with different tags on each side. -->
+<!-- This is for loading a box with different tags on each side. Adds a pole. -->
 <robot name="box" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="pole_height" value="0.4" />
+  <xacro:property name="pole_radius" value="0.05" />
+  <xacro:property name="box_width"   value="0.2" />
+  <material name="light_grey"><color rgba="0.4 0.4 0.4 1.0" /></material>
+  
+  <link name="base_link"></link>
+  
+  <joint name="pole_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="pole_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+  </joint>
+  
+  <link name="pole_link">
+    <inertial>
+      <origin xyz="0 0 ${pole_height/2}" />
+      <mass value="10.0" />
+      <inertia  ixx="0.4" ixy="0.0"  ixz="0.0"  iyy="0.4"  iyz="0.0"  izz="0.2" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 ${pole_height/2}"/>
+      <geometry>
+        <cylinder length="${pole_height}" radius="${pole_radius}"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${pole_height/2}"/>
+      <geometry>
+        <cylinder length="${pole_height}" radius="${pole_radius}"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="ar_tag_joint" type="fixed">
+    <parent link="pole_link" />
+    <child link="tag_link" />
+    <origin xyz="0 0 ${pole_height}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  
   <link name="tag_link">
     <inertial>
       <origin xyz="0 0 0" />
@@ -8,7 +50,7 @@
       <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0.15"/>
+      <origin xyz="0 0 ${box_width/2}"/>
       <geometry>
         <!--AR Track Alvar. -->
         <!--<mesh filename="package://tag_world/meshes/tags$(arg tag_num).dae" />-->
@@ -17,21 +59,16 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 0.15"/>
+      <origin xyz="0 0 ${box_width/2}"/>
       <geometry>
-        <box size="0.3 0.3 0.3" />
+        <box size="${box_width} ${box_width} ${box_width}" />
       </geometry>
     </collision>
   </link>
   
-  <link name="base_link"></link>
+  
    
-  <joint name="ar_tag_joint" type="fixed">
-    <parent link="base_link" />
-    <child link="tag_link" />
-    <origin xyz="0 0 0.19" rpy="0 0 0" />
-    <axis xyz="0 1 0" />
-  </joint>
+  
   
   <!-- Robot 0 has tags 0 to 5, robot 1 has tags 6 to 10 etc.
        From the perspective of the host robot, the order is: 
@@ -52,7 +89,7 @@
        -->
        
   <xacro:property name="num" value="$(arg tag_num)" />
-  <xacro:property name="width" value="0.3"/>
+  <xacro:property name="width" value="${box_width}"/>
   
   <link name="ar_marker_${num*6}"></link>    
   <joint name="ar_marker_${num*6}_joint" type="fixed">

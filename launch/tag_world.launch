@@ -16,13 +16,10 @@
     <arg name="gui"          value="$(arg gui)"/>
   </include>
 
-  <!-- Load the tag box as a parameter. -->
-	<param name="$(arg ns)/tag$(arg tag_num)"
-	    command="$(find xacro)/xacro '$(find tag_world)/models/tag_box.urdf.xacro' 
-	    'tag_world:=$(find tag_world)' 'tag_num:=$(arg tag_num)' " />
-	
-	<!-- Spawn it. -->
-  <node name="spawn_tag_model" pkg="gazebo_ros" type="spawn_model" ns="$(arg ns)"
-		args="-urdf -param /$(arg ns)/tag$(arg tag_num) -model $(arg ns)"/>
-		
+  <!-- Spawn the box. -->
+  <include file="$(find tag_world)/launch/spawn_box.launch">
+    <arg name="ns"      value="$(arg ns)"/>
+    <arg name="tag_num" value="$(arg tag_num)"/>
+  </include>
+
 </launch>

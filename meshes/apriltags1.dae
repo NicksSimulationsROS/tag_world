@@ -384,7 +384,7 @@
       </node>
       <node id="Cube" name="Cube" type="NODE">
         <!-- Alter this line to scale. -->
-        <matrix sid="transform">0.15 0 0 0 0 0.15 0 0 0 0 0.15 0 0 0 0 1</matrix>
+        <matrix sid="transform">0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 1</matrix>
         <instance_geometry url="#Cube-mesh" name="Cube">
           <bind_material>
             <technique_common>
