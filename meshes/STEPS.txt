@@ -7,11 +7,18 @@ https://online2pdf.com/convert-ps-to-pdf
 rename the pdf to apriltags
 
 
-convert to png 
+OPTION 1)convert to png 
 http://pdf2png.com/
 
 crop images at same time: 50 at a time, (bottom focal point, 1200x1400, then top focal point, 1200x1200)
 https://birme.net/
+
+Add whitespace (1400x1200, Pro options, png padding)
+https://bulkresizephotos.com/
+
+crop images at same time: 50 at a time, (left focal point, 1320x1200, then right focal point, 1200x1200)
+https://birme.net/
+
 
 compress the png
 https://tinypng.com/
