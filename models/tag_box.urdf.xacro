@@ -10,7 +10,7 @@
     <visual>
       <origin xyz="0 0 0.15"/>
       <geometry>
-        <mesh filename="package://tag_world/meshes/apriltags$(arg tag_num).dae" />
+        <mesh filename="package://tag_world/meshes/apriltags/apriltags$(arg tag_num).dae" />
       </geometry>
     </visual>
     <collision>

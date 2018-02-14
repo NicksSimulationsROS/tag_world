@@ -11,23 +11,23 @@
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_images>
-    <image id="tag0_no_border__png" name="tag0_no_border__png">
-      <init_from>images-apriltags/apriltags-001.png</init_from>
+    <image id="tag0__png" name="tag0__png">
+      <init_from>images/apriltags-001.png</init_from>
     </image>
-    <image id="tag1_no_border__png" name="tag1_no_border__png">
-      <init_from>images-apriltags/apriltags-002.png</init_from>
+    <image id="tag1__png" name="tag1__png">
+      <init_from>images/apriltags-002.png</init_from>
     </image>
-    <image id="tag2_no_border__png" name="tag2_no_border__png">
-      <init_from>images-apriltags/apriltags-003.png</init_from>
+    <image id="tag2__png" name="tag2__png">
+      <init_from>images/apriltags-003.png</init_from>
     </image>
-    <image id="tag3_no_border__png" name="tag3_no_border__png">
-      <init_from>images-apriltags/apriltags-004.png</init_from>
+    <image id="tag3__png" name="tag3__png">
+      <init_from>images/apriltags-004.png</init_from>
     </image>
-    <image id="tag4_no_border__png" name="tag4_no_border__png">
-      <init_from>images-apriltags/apriltags-005.png</init_from>
+    <image id="tag4__png" name="tag4__png">
+      <init_from>images/apriltags-005.png</init_from>
     </image>
-    <image id="tag5_no_border__png" name="tag5_no_border__png">
-      <init_from>images-apriltags/apriltags-006.png</init_from>
+    <image id="tag5__png" name="tag5__png">
+      <init_from>images/apriltags-006.png</init_from>
     </image>
   </library_images>
   <library_effects>
@@ -59,14 +59,14 @@
     </effect>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="tag0_no_border__png-surface">
+        <newparam sid="tag0__png-surface">
           <surface type="2D">
-            <init_from>tag0_no_border__png</init_from>
+            <init_from>tag0__png</init_from>
           </surface>
         </newparam>
-        <newparam sid="tag0_no_border__png-sampler">
+        <newparam sid="tag0__png-sampler">
           <sampler2D>
-            <source>tag0_no_border__png-surface</source>
+            <source>tag0__png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -78,7 +78,7 @@
               <color sid="ambient">1 1 1 1</color>
             </ambient>
             <diffuse>
-              <texture texture="tag0_no_border__png-sampler" texcoord="UVMap"/>
+              <texture texture="tag0__png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -95,14 +95,14 @@
     </effect>
     <effect id="Material_002-effect">
       <profile_COMMON>
-        <newparam sid="tag1_no_border__png-surface">
+        <newparam sid="tag1__png-surface">
           <surface type="2D">
-            <init_from>tag1_no_border__png</init_from>
+            <init_from>tag1__png</init_from>
           </surface>
         </newparam>
-        <newparam sid="tag1_no_border__png-sampler">
+        <newparam sid="tag1__png-sampler">
           <sampler2D>
-            <source>tag1_no_border__png-surface</source>
+            <source>tag1__png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -114,7 +114,7 @@
               <color sid="ambient">1 1 1 1</color>
             </ambient>
             <diffuse>
-              <texture texture="tag1_no_border__png-sampler" texcoord="UVMap"/>
+              <texture texture="tag1__png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -131,14 +131,14 @@
     </effect>
     <effect id="Material_003-effect">
       <profile_COMMON>
-        <newparam sid="tag2_no_border__png-surface">
+        <newparam sid="tag2__png-surface">
           <surface type="2D">
-            <init_from>tag2_no_border__png</init_from>
+            <init_from>tag2__png</init_from>
           </surface>
         </newparam>
-        <newparam sid="tag2_no_border__png-sampler">
+        <newparam sid="tag2__png-sampler">
           <sampler2D>
-            <source>tag2_no_border__png-surface</source>
+            <source>tag2__png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -150,7 +150,7 @@
               <color sid="ambient">1 1 1 1</color>
             </ambient>
             <diffuse>
-              <texture texture="tag2_no_border__png-sampler" texcoord="UVMap"/>
+              <texture texture="tag2__png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -167,14 +167,14 @@
     </effect>
     <effect id="Material_004-effect">
       <profile_COMMON>
-        <newparam sid="tag3_no_border__png-surface">
+        <newparam sid="tag3__png-surface">
           <surface type="2D">
-            <init_from>tag3_no_border__png</init_from>
+            <init_from>tag3__png</init_from>
           </surface>
         </newparam>
-        <newparam sid="tag3_no_border__png-sampler">
+        <newparam sid="tag3__png-sampler">
           <sampler2D>
-            <source>tag3_no_border__png-surface</source>
+            <source>tag3__png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -186,7 +186,7 @@
               <color sid="ambient">1 1 1 1</color>
             </ambient>
             <diffuse>
-              <texture texture="tag3_no_border__png-sampler" texcoord="UVMap"/>
+              <texture texture="tag3__png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -203,14 +203,14 @@
     </effect>
     <effect id="Material_005-effect">
       <profile_COMMON>
-        <newparam sid="tag4_no_border__png-surface">
+        <newparam sid="tag4__png-surface">
           <surface type="2D">
-            <init_from>tag4_no_border__png</init_from>
+            <init_from>tag4__png</init_from>
           </surface>
         </newparam>
-        <newparam sid="tag4_no_border__png-sampler">
+        <newparam sid="tag4__png-sampler">
           <sampler2D>
-            <source>tag4_no_border__png-surface</source>
+            <source>tag4__png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -222,7 +222,7 @@
               <color sid="ambient">1 1 1 1</color>
             </ambient>
             <diffuse>
-              <texture texture="tag4_no_border__png-sampler" texcoord="UVMap"/>
+              <texture texture="tag4__png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -239,14 +239,14 @@
     </effect>
     <effect id="Material_006-effect">
       <profile_COMMON>
-        <newparam sid="tag5_no_border__png-surface">
+        <newparam sid="tag5__png-surface">
           <surface type="2D">
-            <init_from>tag5_no_border__png</init_from>
+            <init_from>tag5__png</init_from>
           </surface>
         </newparam>
-        <newparam sid="tag5_no_border__png-sampler">
+        <newparam sid="tag5__png-sampler">
           <sampler2D>
-            <source>tag5_no_border__png-surface</source>
+            <source>tag5__png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -258,7 +258,7 @@
               <color sid="ambient">1 1 1 1</color>
             </ambient>
             <diffuse>
-              <texture texture="tag5_no_border__png-sampler" texcoord="UVMap"/>
+              <texture texture="tag5__png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
