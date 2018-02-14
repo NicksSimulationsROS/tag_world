@@ -1,0 +1,17 @@
+download from here
+https://april.eecs.umich.edu/software/apriltag.html
+
+convert the .ps to .pdf (one pdf)
+https://online2pdf.com/convert-ps-to-pdf
+
+rename the pdf to apriltags
+
+
+convert to png 
+http://pdf2png.com/
+
+crop images at same time: 50 at a time, (bottom focal point, 1200x1400, then top focal point, 1200x1200)
+https://birme.net/
+
+compress the png
+https://tinypng.com/
