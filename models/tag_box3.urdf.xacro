@@ -91,7 +91,7 @@
   <xacro:property name="num" value="$(arg tag_num)" />
   <xacro:property name="width" value="${box_width}"/>
   
-  <link name="ar_marker_${num*6}"></link>    
+  <link name="ar_marker_${num*6}"></link>
   <joint name="ar_marker_${num*6}_joint" type="fixed">
     <parent link="tag_link" />
     <child link="ar_marker_${num*6}" />

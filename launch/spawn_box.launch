@@ -16,7 +16,7 @@
   <!-- Load the tag box as a parameter. -->
 	<param name="$(arg ns)/robot_description"
 	    command="$(find xacro)/xacro '$(find tag_world)/models/tag_box3.urdf.xacro' 
-	    'tag_num:=$(arg tag_num)' " />
+	    --inorder 'tag_num:=$(arg tag_num)' " />
 	
 	<!-- Spawn it. -->
   <node name="spawn_tag_model" pkg="gazebo_ros" type="spawn_model" ns="$(arg ns)"
